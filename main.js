@@ -13,6 +13,12 @@ function updateClock() {
     timeHolder.innerText = hours + ':' + minutes + ':' + seconds;
 
     //update weekday
+    const weekdayHolder = document.getElementById('weekday');
+    weekdayHolder.innerText = getWeekdayString(date);
+
+    //update date
+    const monthHolder = document.getElementById('month');
+    monthHolder.innerText = getMonthString(date);
 
     function getWeekday(date) {
         const weekdayIndex = date.getDay();
@@ -27,6 +33,13 @@ function updateClock() {
         }
     }
 }
+
+function getWeekdayString(date) {
+
+}
+
+function getMonthString(value) {
+    const monthIndex = date.getMonth
 
 function formatDateValue(value) {
     if (value < 10) {
